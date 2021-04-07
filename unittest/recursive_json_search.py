@@ -32,3 +32,6 @@ class json_search_test(unittest.TestCase):
     def test_is_a_list(self):
         '''Should return a list'''
         self.assertIsInstance(json_search(key1,data),list)
+#adding unittest.main() method, to make sure that unittest.main() runs only if the script is ran directly, not imported.
+if __name__ == '__main__':
+    unittest.main()
