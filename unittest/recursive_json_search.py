@@ -25,5 +25,6 @@ def json_search(key,input_object):
             for val in input_object:
                 if not isinstance(val, (str,int)):
                     inner_function(key,val)
-        return ret_val
+    inner_function(key,input_object)
+    return ret_val
 print(json_search("issueSummary", data))
