@@ -8,10 +8,10 @@
    - name: DISPLAYING THE RUNNING-CONFIG
      ios_command:
        commands:
-        - show running-config
+         - show running-config
      register: config
 
    - name: SAVE OUTPUT TO ./backups/
      copy:
        content: "{{ config.stdout[0] }}"
-       dest: "backups/showrun_{{ inventory_hostname }}.txt"
+       dest: "backups/show_run_{{ inventory_hostname }}.txt"
